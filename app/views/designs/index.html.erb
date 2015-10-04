@@ -1,0 +1,33 @@
+<div class="show-design"></div>
+<div class="container">
+  <h2>SpoonFlower Designs</h2>
+  <table class="table table-hover">
+    <thead>
+    <tr>
+      <th>Preview</th>
+      <th>Name</th>
+      <th>User</th>
+      <th>Short Description</th>
+    </tr>
+    </thead>
+    <tbody>
+      <% @designs.each do |design| %>
+      <tr data-id="<%= design['id'] %>">
+        <td><%= image_tag(design['thumbnail_url']) %></td>
+        <td><%= design['name'] %></td>
+        <td><%= full_name(design['user']['first_name'], design['user']['last_name'])%></td>
+        <td><%= design['short_description'] %></td>
+      </tr>      <% end %>
+    </tbody>
+  </table>
+</div>
+
+<script>
+  $('tr').click(function() {
+    var id = $(this).data('id');
+    if(!!id){
+      $('.show-design').slideUp();
+      $.get('/designs/'+id, '', '', 'script');
+    }
+  });
+</script>

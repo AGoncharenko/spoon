@@ -1,0 +1,21 @@
+<%= image_tag(@design['thumbnail_url']) %>
+<dl class="dl-horizontal">
+  <dt>Name</dt>
+  <dd><%= @design['name'] %></dd>
+  <dt>Filename</dt>
+  <dd><%= @design['filename'] %></dd>
+  <dt>Short Description</dt>
+  <dd><%= @design['short_description'] %></dd>
+  <dt>Tags</dt>
+  <dd>
+    <ul>
+    <% @design['tags'].each do |tag| %>
+      <li><%= tag %></li>
+    <% end %>
+    </ul>
+  </dd>
+  <dt>User Name</dt>
+  <dd><%= full_name(@design['user']['first_name'], @design['user']['last_name']) %></dd>
+  <dt>User Home Country</dt>
+  <dd><%= @design['user']['home_country'] %></dd>
+</dl>

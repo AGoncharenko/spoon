@@ -1,3 +1,5 @@
+/config/secrets.yml
+/.idea
 #----------------------------------------------------------------------------
 # Ignore these files when commiting to a git repository.
 #
