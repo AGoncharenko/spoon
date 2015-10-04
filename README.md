@@ -12,13 +12,15 @@ This application requires:
 Getting Started
 ---------------
 
-in terminal:
-run $ rails s 
-visit localhost:3000 in your favorite browser
-click on any table raw to view details of designs
+In terminal:
+
+- run $ rails s 
+- visit localhost:3000 in your favorite browser
+- click on any table raw to view details of designs
 
 Tests
 -------------------------
 
-to run tests type in terminal:
-run $ rspec
+To run tests type in terminal:
+
+- run $ rspec
